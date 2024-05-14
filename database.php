@@ -1,6 +1,6 @@
 <?php class database{
     function opencon(){
-        return new PDO('mysql:host=localhost; dbname=phpoop_221','root','');
+        return new PDO('mysql:host=localhost; dbname=phpoop','root','');
     }
 
      // Check //
