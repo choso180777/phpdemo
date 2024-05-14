@@ -6,6 +6,10 @@ $con = new database();
 
 $error = "";
 
+session_start();
+if (empty($_SESSION["user"])) {  
+  header("location:login.php");
+}
 
 if(isset($_POST['delete'])){
   $id = $_POST['id'];
@@ -30,6 +34,8 @@ if(isset($_POST['delete'])){
 <link rel="stylesheet" href="./includes/style.css">
 </head>
 <body>
+
+<?php include('includes/navbar.php');?>
 
 <div class="container user-info rounded shadow p-3 my-2">
 <h2 class="text-center mb-2">User Table</h2>
